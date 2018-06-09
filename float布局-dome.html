@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .temp_box {
+            width: 100px;
+            height: 60px;
+            border: 1px solid red;
+            margin: 10px;
+            float: left;
+        }
+        
+        .box {
+            border: 1px solid blue;
+        }
+        
+        .box_ba {
+            border: 1px solid black;
+        }
+        
+        .box_after {
+            margin-top: 10px;
+            background: red;
+            /*clear:both;*/
+        }
+        
+        .clearF:after {
+            display: block;
+            height: 0;
+            content: "";
+            clear: both;
+            visibility: hidden
+            /*clear: both;*/
+        }
+        /*
+       使用浮动一般是让块级元素具有行内元素的效果。
+         1.浮动元素会脱离文档流，如果父元素是高度只适应的话，父元素的盒模型都会没有效果，同时
+           后面的元素会向上顶上来，发生布局错乱。这个时候有三种解决办法：
+            a.给浮动的父元素设置高度。父元素是具有盒模型的大小的。
+            b.给父元素的设置overflow:hidden;父元素的会根据子元素的盒模型的大小自动生成。<闭合浮动>
+            c.给父元素的后面元素设置清除浮动（clear:both），父元素是没有盒模型的大小的。
+            d.同时是还可以添加伪元素，如上clearF:after清除浮动。
+         2.行内元素设置了float:left/right,是具有块级元素的效果。inline-back特性。
+     
+     */
+    </style>
+</head>
+
+<body>
+    <div class="box_before box_ba">box before</div>
+    <div class="box">
+        <div class="f_box1 temp_box">box1</div>
+        <div class="f_box2 temp_box">box2</div>
+        <!--添加一个空元素进行清除浮动 clear:both-->
+        <div></div>
+        <!--<span>行内元素</span>-->
+    </div>
+    <div class="box_after box_ba">box after</div>
+</body>
+
+</html>
