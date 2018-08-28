@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .dd {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+        }
+        
+        span {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            /* 设置为这个属性 box-sizing:border-box */
+            /* 这个时候盒子的width/height:border+padding+content,在布局的时候非常有用这个属性，即改变border,padding 原先设置的width,height不会发生改变，不会影响到周边其他盒子的 */
+            /* 布局效果 */
+            /* box-sizing:content-box 只是内容的宽高，设置padding,border影响到这个盒子的大小，即整体的布局效果 */
+            box-sizing: border-box;
+            padding: 20px;
+            /* 此时的content的高度会发生改变的为58px */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="dd">
+        fgsfgsgf
+    </div>
+    <span>
+        我是span
+    </span>
+</body>
+
+</html>
