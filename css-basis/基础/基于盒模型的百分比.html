@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .parent {
+            width: 200px;
+            height: 200px;
+            margin: 25px;
+            border: 1px solid rebeccapurple;
+        }
+        
+        .parent .child {
+            /* 200*20% */
+            width: 20%;
+            height: 50px;
+            background: red;
+        }
+        
+        .p2 {
+            height: 100px;
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+            width百分比的设置只跟盒模型的content的width有关系，跟box-sizing的类型没有关系。
+     -->
+    <div class="parent">
+        <div class="child">
+        </div>
+    </div>
+    <div class="p2"></div>
+
+</body>
+
+</html>

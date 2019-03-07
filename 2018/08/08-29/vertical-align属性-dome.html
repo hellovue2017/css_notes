@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>overtical-align</title>
+    <style>
+        .d {
+            width: 500px;
+            height: 500px;
+            border: 1px solid;
+            margin: 50px;
+        }
+        
+        .d1 {
+            height: 100px;
+            border: 1px solid;
+            width: 100%;
+            margin: 50px;
+        }
+        
+        .box {
+            background: black;
+            color: white;
+            margin: 20px;
+            height: 60px;
+            /* //display: inline-block; */
+            line-height: 60px;
+        }
+        
+        .s {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: white;
+            margin-left: 20px;
+            vertical-align: middle;
+            /* 垂直居中了 */
+        }
+        
+        img {
+            vertical-align: middle;
+            /* 垂直居中了 */
+        }
+        
+        .div-black {
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d">
+        <div class="d1">
+            <div class="box">
+                <span class="s"></span> 你好简单家具的对对对
+                <button type="button">button</button>
+                <img src="./rule_but.png" alt="">
+                <span class="div-black">div-black</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

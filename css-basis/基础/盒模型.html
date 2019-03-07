@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .p1 {
+            height: 100px;
+            background: gold;
+        }
+        
+        .p2 {
+            height: 120px;
+            background: rebeccapurple;
+            /* padding: 10px;
+            border: 20px solid black;
+            margin: 30px; */
+            /* 默认的情况下box-sizing:content-box; height=120 +10*2+20*2+30*2 =>height=240px */
+        }
+        
+        .p2 ::before {
+            content: " ";
+            display: table;
+        }
+        
+        .p2 .child {
+            height: 50px;
+            background: red;
+            margin-top: 20px;
+        }
+        
+        .p3 {
+            height: 50px;
+            background: green;
+            padding: 10px;
+            margin: 10px;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="p1"></div>
+    <div class="p2">
+        <div class="child"></div>
+    </div>
+    <div class="p3" id="p3"></div>
+</body>
+
+</html>
