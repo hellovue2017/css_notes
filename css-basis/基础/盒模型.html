@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .parent {
+            /*width: 200px;*/
+            height: 200px;
+            background: red;
+        }
+        
+        .parent .child {
+            /*width: 100px;*/
+            height: 100px;
+            background: green;
+            margin-top: 20px;
+        }
+        
+        .p1 {
+            /*width: 300px; width默认为百分比*/
+            height: 100px;
+            background: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+     边距重叠：
+      parent下的child设置了margin-top而parent没有设置margin-top,这个时候发现parent有了margin-top,
+      距离p1 20px;
+
+
+    -->
+    <div class="p1"></div>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>
