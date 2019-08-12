@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        .triangle {
-            width: 0px;
-            height: 0px;
-            border: 10px solid transparent;
-            border-right: 10px solid blue;
-        }
-    </style>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<style>
+			.triangle {
+				width: 0px;
+				height: 0px;
+				border: 10px solid transparent;
+				border-right: 10px solid blue;
+			}
 
-<body>
-    <div class="triangle">
-    </div>
-</body>
+			.arrow {
+				display: inline-block;
+				border-right: 2px solid #999999;
+				border-top: 2px solid #999999;
+				height: 10px;
+				width: 10px;
+				transform: rotate(135deg);
+				-webkit-transform: rotate(135deg);
+				/*不加这两个属性三角会比上一个略丑, 大家可以试一下*/
+				border-left: 2px solid transparent;
+				border-bottom: 2px solid transparent;
+				cursor: pointer;
+			}
+			
+			.transform315{
+				transform: rotate(315deg);
+				-webkit-transform: rotate(315deg);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="triangle">
+		</div>
+
+		<div style="margin-top:20px"></div>
+		<!-- 箭头样式 -->
+		<span class="arrow" id="arrow" onclick="setTransform()"></span>
+	</body>
+	<script>
+		function setTransform(){
+			var domAW=document.getElementById('arrow');
+			if(domAW.className.indexOf('transform315') ==-1){
+				domAW.className +=" transform315";
+				return;
+			}
+			domAW.className =" arrow";
+		} 
+	</script>
 
 </html>

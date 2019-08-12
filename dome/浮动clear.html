@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 
+			 0010
+			 0001
+			 */
+			.up .left,.right{
+				width: 200px;
+				height: 150px;
+			}
+			/* 0020 */
+			.up .left{
+				background-color: pink;
+				float: left;
+				height: 300px;
+			}
+			.up .right{
+				background-color: purple;
+				float: left;
+			}
+			/* 0010 */
+			.bottom{
+			    background-color: #000000;
+				width: 600px;
+				height: 300px;
+				/* 解决平级元素且在当前之上元素包含的子元素浮动引起的高度坍塌、或者将父级元素设置一定的高度但是一般不要设定一定的高度 */
+				/* clear: both; */
+			}
+			.up:after{
+				content:'';
+				display: block;
+				/*height: 0;
+				visibility: hidden; */
+				clear: both;
+			}
+
+			/* 
+			清除浮动元素的几种方法；
+			   1、额外标签法（隔墙法）。
+					--在浮动元素的末尾添加一个空标签、位置可以放在多个地方、放在不影响标准流元素之前使用都可以的
+					--多出一些无意义的标签元素
+			   2、父级元素添加overflow属性。
+			        --浮动元素的父级上去添加overflow:auto
+			   3、after伪元素清除浮动。
+			        --在浮动元素的父级元素上添加伪元素进行添加
+					--低版本浏览器IE有兼容性问题父元素上要加上*zoom:1;
+					--伪元素的解决方法相当于是用css写了一个元素,在这个元素上添加了一些样式
+					eg:
+					.up:after{
+						content:'';
+						display:black;
+						clear:both;
+					}
+			   4、双伪元素清除浮动。
+			 */
+			
+		</style>
+	</head>
+	<body>
+			<div class="up">
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+			<!-- <div style="clear: both;"></div> -->
+			<div class="bottom"></div>
+	</body>
+</html>

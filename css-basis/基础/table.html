@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table</title>
+</head>
+
+<body>
+    <div>thead、th、tbody、tfoot、</div>
+    <table border="1" bordercolor="green" cellpadding="5" cellspacing="6">
+        <thead>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+            <th>Header 4</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>学号</td>
+                <td>班级</td>
+                <td>年龄</td>
+                <td>成绩</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>三班</td>
+                <td>15</td>
+                <td>160</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <td>tfood...</td>
+        </tfoot>
+    </table>
+    <div style="margin-top: 50px">rowspan、colspan
+        <!--------rowspan、colspan------------>
+        <table border="1">
+            <!-- 表头 -->
+            <tr>
+                <th>column 1</th>
+                <th>column 2</th>
+                <th>column 3</th>
+            </tr>
+            <!-- 第一行数据 -->
+            <tr>
+                <!-- 第一行 第一列 -->
+                <td rowspan="3">t1 td 1</td>
+                <!-- 第一行 第二列 -->
+                <td>t1 td 2</td>
+                <!-- 第一行 第三列 -->
+                <td>t1 td 3</td>
+            </tr>
+            <!-- 第二行数据 -->
+            <tr>
+                <!-- <td>t2 td 1</td> -->
+                <td>t2 td 2</td>
+                <td>t2 td 3</td>
+            </tr>
+            <!-- 第三行数据 -->
+            <tr>
+                <!-- <td>t3 td 1</td> -->
+                <td colspan="2">t3 td 2</td>
+                <!-- <td>t3 td 3</td> -->
+            </tr>
+        </table>
+    </div>
+    <div>嵌套表格
+        <table>
+            <thead>
+                <th>head 1</th>
+                <th>head 2</th>
+                <th>head 3</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr style="margin-left: 20px">
+                    <table bordercolor="red">
+                        <tr>
+                            <th>tr table 1</th>
+                            <th>tr table 2</th>
+                            <th>tr table 3</th>
+                        </tr>
+                        <tr>
+                            <td>t1-1</td>
+                            <td>t1-2</td>
+                            <td>t1-3</td>
+                        </tr>
+                        <tr>
+                            <td>t2-1</td>
+                            <td>t2-2</td>
+                            <td>t2-3</td>
+                        </tr>
+                    </table>
+                </tr>
+            </tbody>
+            <tfoot>
+                tfoot......
+            </tfoot>
+        </table>
+
+    </div>
+</body>
+<script>
+</script>
+
+</html>
