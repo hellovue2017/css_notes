@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				width: 200px;
+				height: 120px;
+				border: 1px solid pink;
+			}
+			div:before{
+				display: inline-block;
+				content: '我';
+				width: 50px;
+				height: 30px;
+				background-color: pink;
+			}
+			div:after{
+				display: inline-block;
+				content: '伪元素';
+				width: 100px;
+				height: 60px;
+				background-color: gray;
+			}
+			/* 
+			  伪元素添加的是一个行内元素、可以在他的前后添加一个行内元素
+			  添加的元素是具有跟其他行内元素相同的功能、同时也可以让行内与块级元素相互转换
+			  运用得比较多的场景就是使用字体图标、可以减少页面元素dom、让页面看上去更加简单一些。
+			 */
+		</style>
+	</head>
+	<body>
+		<div>
+			是
+		</div>
+	</body>
+</html>
